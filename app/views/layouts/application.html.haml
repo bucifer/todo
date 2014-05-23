@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title Todo
+    = stylesheet_link_tag "application",  media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .row-fluid
+      .hero-unit
+        %h1
+          ToDo
+        %p
+          Welcome to the tutorial Todo Application by Terry
+        .span7.text-center  
+        = link_to 'New Task', new_task_path, class: 'btn btn-primary', remote: true
+    = yield
+    
